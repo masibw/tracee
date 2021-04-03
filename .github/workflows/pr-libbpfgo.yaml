@@ -16,6 +16,8 @@ jobs:
           go-version: 1.15
       - name: Checkout Code
         uses: actions/checkout@v2
+      - name: unit test helpers
+        run: go test ./helpers
       - name: selftest
         run: |
           sudo ./selftest/run.sh
